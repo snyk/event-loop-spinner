@@ -1,0 +1,31 @@
+{
+  "name": "eventloop-spinner",
+  "version": "1.0.0",
+  "description": "Tiny helper to prevent blocking Node.js event loop.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snyk/eventloop-spinner.git"
+  },
+  "author": "snyk.io",
+  "license": "MIT",
+  "keywords": [
+    "block",
+    "event",
+    "loop",
+    "libuv"
+  ],
+  "bugs": {
+    "url": "https://github.com/snyk/eventloop-spinner/issues"
+  },
+  "homepage": "https://github.com/snyk/eventloop-spinner#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-plugin-jest": "^22.7.1",
+    "jest": "^24.8.0"
+  }
+}
