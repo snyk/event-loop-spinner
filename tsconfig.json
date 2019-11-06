@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es2018",
+    "lib": [
+      "es6"
+    ],
+    "module": "commonjs",
+    "declaration": true,
+    "sourceMap": true,
+    "pretty": true,
+    "importHelpers": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true
+  },
+  "include": [
+    "./lib/**/*"
+  ]
+}
