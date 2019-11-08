@@ -1,5 +1,5 @@
 {
-  "name": "eventloop-spinner",
+  "name": "event-loop-spinner",
   "version": "0.9.0",
   "description": "Tiny helper to prevent blocking Node.js event loop",
   "main": "dist/index.js",
