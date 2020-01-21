@@ -12,7 +12,9 @@
     "lint": "eslint 'lib/**/*.?s'",
     "format": "prettier --write 'lib/**/*.?s' 'test/**/*.?s'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^1.10.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.22",
     "@types/node": "^10.17.4",
