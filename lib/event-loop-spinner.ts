@@ -9,14 +9,10 @@ export class EventLoopSpinner {
     return Date.now() - this.afterLastSpin > this.thresholdMs;
   }
 
-  public reset(): void {
-    this.afterLastSpin = Date.now();
-  }
-
   public async spin(): Promise<void> {
     return new Promise((resolve) =>
       setImmediate(() => {
-        this.reset();
+        this.afterLastSpin = Date.now();
         resolve();
       }),
     );
