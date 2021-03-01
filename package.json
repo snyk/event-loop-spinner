@@ -13,7 +13,7 @@
     "format": "prettier --write 'lib/**/*.?s' 'test/**/*.?s'"
   },
   "dependencies": {
-    "tslib": "^1.10.0"
+    "tslib": "^2.1.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
@@ -26,7 +26,7 @@
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
-    "typescript": "^3.7.2"
+    "typescript": "~4.2.2"
   },
   "repository": {
     "type": "git",
