@@ -1,3 +1,8 @@
+const immediately =
+  typeof setImmediate === 'function'
+    ? setImmediate
+    : (cb: () => void): void => cb();
+
 export class EventLoopSpinner {
   private afterLastSpin: number;
 
@@ -11,7 +16,7 @@ export class EventLoopSpinner {
 
   public async spin(): Promise<void> {
     return new Promise((resolve) =>
-      setImmediate(() => {
+      immediately(() => {
         this.afterLastSpin = Date.now();
         resolve();
       }),
