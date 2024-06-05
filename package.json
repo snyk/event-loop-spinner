@@ -37,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/snyk/eventloop-spinner/issues"
   },
-  "homepage": "https://github.com/snyk/eventloop-spinner#readme"
+  "homepage": "https://github.com/snyk/eventloop-spinner#readme",
+  "license": "Apache-2.0"
 }
