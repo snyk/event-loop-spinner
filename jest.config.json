@@ -1,0 +1,11 @@
+{
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.(ts)?$": "ts-jest"
+  },
+  "testMatch": ["**/*.test.ts"],
+  "collectCoverage": false,
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "forceExit": true,
+  "testTimeout": 80000
+}

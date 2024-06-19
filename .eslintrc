@@ -10,7 +10,7 @@
     ],
     "rules": {
       "@typescript-eslint/no-explicit-any": "off",
-      "require-await": "warn",
+      "require-await": "off",
       "camelcase": "error",
       "default-case": "error",
       "default-case-last": "error",
