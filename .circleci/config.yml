@@ -13,7 +13,7 @@ defaults: &defaults
   parameters:
     node_version:
       type: string
-      default: "18.19.1"
+      default: "20.12.2"
   working_directory: ~/event-loop-spinner
 
 commands:
@@ -89,7 +89,7 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: node:18
+      - image: node:20
     steps:
       - checkout
       - install_deps
@@ -98,7 +98,7 @@ jobs:
           command: npm run build
       - run:
           name: Publish to GitHub
-          command: npx semantic-release@21
+          command: npx semantic-release@24
 
 workflows:
   version: 2
