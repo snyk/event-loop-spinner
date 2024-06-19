@@ -1,21 +1,17 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "es2017",
-    "lib": [
-      "es2017"
-    ],
-    "module": "commonjs",
-    "declaration": true,
-    "sourceMap": true,
     "pretty": true,
-    "importHelpers": true,
+    "target": "es2019",
+    "module": "commonjs",
+    "sourceMap": true,
+    "declaration": true,
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noImplicitReturns": true
   },
   "include": [
-    "./lib/**/*"
+    "./lib/*"
   ]
 }
