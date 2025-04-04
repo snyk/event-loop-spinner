@@ -108,7 +108,7 @@ workflows:
           name: Scan repository for secrets
           context:
             - snyk-bot-slack
-          channel: os-team-managed-alerts
+          channel: snyk-vuln-alerts-sca
       - security-scans:
           name: Perform security scans for PRs
           context:
