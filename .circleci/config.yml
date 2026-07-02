@@ -89,7 +89,7 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: node:20
+      - image: cimg/node:24.18
     steps:
       - checkout
       - install_deps
@@ -97,11 +97,12 @@ jobs:
           name: Run build
           command: npm run build
       - run:
-          name: Publish to GitHub
-          command: npx semantic-release@24
+          name: Publish to npm and GitHub
+          command: |
+            export NPM_ID_TOKEN=$(circleci run oidc get --claims '{"aud": "npm:registry.npmjs.org"}')
+            npx semantic-release@25.0.5
 
 workflows:
-  version: 2
   test_and_release:
     jobs:
       - prodsec/secrets-scan:
@@ -125,7 +126,9 @@ workflows:
           <<: *filters_branches_ignore_main
       - release:
           name: Release
-          context: nodejs-lib-release
+          context:
+            - nodejs-install
+            - github-release
           requires:
             - Scan repository for secrets
             - Perform security scans for PRs

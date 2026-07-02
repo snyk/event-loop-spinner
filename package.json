@@ -29,13 +29,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snyk/eventloop-spinner.git"
+    "url": "https://github.com/snyk/event-loop-spinner.git"
   },
   "author": "snyk.io",
   "types": "dist/index.d.ts",
-  "bugs": {
-    "url": "https://github.com/snyk/eventloop-spinner/issues"
+  "publishConfig": {
+    "access": "public"
   },
-  "homepage": "https://github.com/snyk/eventloop-spinner#readme",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bugs": {
+    "url": "https://github.com/snyk/event-loop-spinner/issues"
+  },
+  "homepage": "https://github.com/snyk/event-loop-spinner#readme",
   "license": "Apache-2.0"
 }
