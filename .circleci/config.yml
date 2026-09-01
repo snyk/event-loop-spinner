@@ -114,7 +114,7 @@ workflows:
       - security-scans:
           name: Perform security scans for PRs
           context:
-            - open_source-managed
+            - engines_sca-scanners
             - prodsec-orb-runtime
       - lint:
           name: Lint
