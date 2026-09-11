@@ -110,7 +110,7 @@ workflows:
           context:
             - snyk-bot-slack
             - prodsec-orb-runtime
-          channel: snyk-vuln-alerts-sca
+          channel: snyk-vuln-alerts-sca-scanners
       - security-scans:
           name: Perform security scans for PRs
           context:
