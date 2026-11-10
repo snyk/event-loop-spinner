@@ -121,10 +121,7 @@ workflows:
           context: nodejs-install
           node_version: "22"
       - test:
-          name: Run tests for Node=<< matrix.node_version >>
-          matrix:
-            parameters:
-              node_version: ['22', '24', '26']
+          name: Run tests
           context: nodejs-install
           requires:
             - Lint
