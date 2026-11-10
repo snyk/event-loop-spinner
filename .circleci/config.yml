@@ -13,7 +13,7 @@ defaults: &defaults
   parameters:
     node_version:
       type: string
-      default: "20.12.2"
+      default: "22"
   working_directory: ~/event-loop-spinner
 
 commands:
@@ -89,7 +89,7 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: cimg/node:24.18
+      - image: cimg/node:22
     steps:
       - checkout
       - install_deps
@@ -119,9 +119,12 @@ workflows:
       - lint:
           name: Lint
           context: nodejs-install
-          node_version: "lts"
+          node_version: "22"
       - test:
-          name: Run tests
+          name: Run tests for Node=<< matrix.node_version >>
+          matrix:
+            parameters:
+              node_version: ['22', '24', '26']
           context: nodejs-install
           requires:
             - Lint
