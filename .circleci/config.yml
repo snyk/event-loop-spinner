@@ -89,7 +89,7 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: cimg/node:22
+      - image: cimg/node:24  # npm 11+ (Node 24) is needed for OIDC trusted publishing
     steps:
       - checkout
       - install_deps
@@ -116,10 +116,11 @@ workflows:
           context:
             - engines_sca-scanners
             - prodsec-orb-runtime
+          node_version: "24"
       - lint:
           name: Lint
           context: nodejs-install
-          node_version: "22"
+          node_version: "24"
       - test:
           name: Run tests
           context: nodejs-install
